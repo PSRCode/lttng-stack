@@ -1,0 +1,15 @@
+[submodule "userspace-rcu"]
+	path = userspace-rcu
+	url = https://github.com/urcu/userspace-rcu.git
+[submodule "babeltrace"]
+	path = babeltrace
+	url = https://github.com/efficios/babeltrace.git
+[submodule "lttng-modules"]
+	path = lttng-modules
+	url = https://github.com/lttng/lttng-modules.git
+[submodule "lttng-ust"]
+	path = lttng-ust
+	url = https://github.com/lttng/lttng-ust.git
+[submodule "lttng-tools"]
+	path = lttng-tools
+	url = https://github.com/lttng/lttng-tools.git
