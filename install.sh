@@ -17,7 +17,7 @@ usage() {
 	echo -e "\t -m Lttng-modules git id (commit/branch)" 1>&2
 	echo -e "\t -b Babeltrace git id (commit/branch)" 1>&2
 	echo -e "\t -s Lttng-ust git id (commit/branch)" 1>&2
-	echo -e "\t -t Lttng-tools Userspace-rcu git id (commit/branch)" 1>&2
+	echo -e "\t -t Lttng-tools git id (commit/branch)" 1>&2
 	exit 1
 }
 
