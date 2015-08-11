@@ -46,6 +46,8 @@ done
 shift $((OPTIND-1))
 
 git submodule init
+git submodule update
+git submodule foreach git checkout master
 git submodule foreach git pull origin master
 git submodule foreach git fetch origin
 
