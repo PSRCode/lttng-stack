@@ -45,8 +45,9 @@ while getopts "u:m:b:s:t:" o; do
 done
 shift $((OPTIND-1))
 
-git pull --recurse-submodules
-git submodule update --recursive
+git submodule init
+git submodule foreach git pull origin master
+git submodule foreach git fetch origin
 
 
 echo "
