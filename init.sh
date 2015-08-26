@@ -46,7 +46,7 @@ while getopts "u:m:b:s:t:" o; do
 done
 shift $((OPTIND-1))
 
-pushd userspace_rcu
+pushd userspace-rcu
 git checkout $git_userspace_rcu
 popd
 

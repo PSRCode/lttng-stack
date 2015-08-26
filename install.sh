@@ -3,7 +3,7 @@ set -e
 
 
 NRPOC=`nproc`
-
+export CFLAGS='-g -O0'
 
 echo "
 ##     ##  ######  ######## ########   ######  ########     ###     ######  ########         ########   ######  ##     ## 
@@ -19,6 +19,7 @@ echo "
 pushd userspace-rcu
 ./bootstrap
 ./configure
+make clean
 make -j $NRPOC
 sudo make install
 sudo ldconfig
@@ -35,6 +36,7 @@ echo "
 "
 
 pushd lttng-modules
+make clean
 make -j $NPROC
 sudo make modules_install
 sudo depmod -a
@@ -54,6 +56,7 @@ echo "
 pushd babeltrace
 ./bootstrap
 ./configure
+make clean
 make -j $NPROC
 sudo make install
 sudo ldconfig
@@ -73,6 +76,7 @@ echo "
 pushd lttng-ust
 ./bootstrap
 ./configure
+make clean
 make -j $NPROC
 sudo make install
 sudo ldconfig
@@ -91,6 +95,7 @@ echo "
 pushd lttng-tools
 ./bootstrap
 ./configure
+make clean
 make -j $NPROC
 sudo make install
 sudo ldconfig
